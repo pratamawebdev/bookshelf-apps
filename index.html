@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bookshelf Apps</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="https://i.pinimg.com/564x/4f/08/77/4f08773577b10264d67f5bcdc2180945.jpg"
+      type="image/x-icon"
+    />
+
+    <!-- Google Icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <!-- Start Body -->
+  <body>
+    <!-- Start Header -->
+    <header>
+      <h1 class="logo">My Bookshelf</h1>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Hero -->
+    <section class="hero">
+      <img
+        src="https://i.pinimg.com/564x/55/70/c8/5570c83e6b9f96e1c932c915e1b90b50.jpg"
+        alt="hero image"
+      />
+    </section>
+    <!-- End Hero -->
+
+    <main>
+      <!-- Start Container Data -->
+      <section id="container-data" class="container-data">
+        <div class="data-total-book">
+          <button class="data-total-book-btn">
+            <i class="fa-solid fa-book"></i>
+          </button>
+          <div class="data-content">
+            <span id="total-book">0</span>
+            <h3>Total Book</h3>
+          </div>
+        </div>
+        <div class="data-finished-reading">
+          <button class="data-finished-reading-btn">
+            <i class="fa-solid fa-book-open"></i>
+          </button>
+          <div class="data-content">
+            <span id="totalFinishBook">0</span>
+            <h3>Finished</h3>
+          </div>
+        </div>
+        <div class="data-unfinished-reading">
+          <button class="data-unfinished-reading-btn">
+            <i class="fa-solid fa-bookmark"></i>
+          </button>
+          <div class="data-content">
+            <span id="totalUnfinishBook">0</span>
+            <h3>Unfinished</h3>
+          </div>
+        </div>
+      </section>
+      <!-- End Container Data -->
+
+      <!-- Start Container Search -->
+      <section class="container-search">
+        <form id="searchBook">
+          <input
+            type="text"
+            id="searchBookTitle"
+            placeholder="Find Your Book"
+          />
+          <button type="submit" id="searchSubmit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </section>
+      <!-- End Container Search -->
+
+      <!-- Start Container Bookshelf -->
+      <section id="container-bookshelf" class="container-bookshelf">
+        <div class="bookshelf-finished">
+          <h2>Finished</h2>
+          <div id="completeBook" class="book-list"></div>
+        </div>
+        <div class="bookshelf-unfinished">
+          <h2>Unfinished</h2>
+          <div id="incompleteBook" class="book-list"></div>
+        </div>
+      </section>
+      <!-- End Container Bookshelf -->
+
+      <!-- Floating Button Add Start -->
+      <div>
+        <button
+          id="openForm"
+          class="fa-solid fa-circle-plus floating-btn"
+        ></button>
+      </div>
+      <!-- Floating Button Add End -->
+
+      <!-- Form Start -->
+      <div class="overlay" id="overlayForm">
+        <span id="closeForm" class="fa-solid fa-xmark"></span>
+        <div class="input-form">
+          <h2>Add Book</h2>
+          <form id="inputBook">
+            <input
+              type="text"
+              id="inputBookTitle"
+              placeholder="Book Title"
+              required
+            />
+            <input
+              type="text"
+              id="inputBookAuthor"
+              placeholder="Book Author"
+              required
+            />
+            <input
+              type="number"
+              id="inputBookYear"
+              placeholder="Book Year"
+              required
+            />
+            <select
+              name="bookCategory"
+              id="inputBookCategory"
+              class="bookCategory"
+              required
+            >
+              <option value="" selected>Select a category...</option>
+              <option value="Pendidikan">Pendidikan</option>
+              <option value="Politik">Politik</option>
+              <option value="Petualangan">Petualangan</option>
+              <option value="Komedia">Komedi</option>
+              <option value="Anak-anak">Anak-anak</option>
+              <option value="Dewasa">Dewasa</option>
+              <option value="Horor">Horor</option>
+              <option value="Misteri">Misteri</option>
+              <option value="Romantis">Romantis</option>
+              <option value="Thriller">Thriller</option>
+              <option value="Sejarah">Sejarah</option>
+            </select>
+            <input
+              type="text"
+              id="inputBookImage"
+              placeholder="ex : https://edit.org/images/cat/book-covers-big-2019101610.jpg"
+            />
+            <div class="input-inline">
+              <input type="checkbox" id="inputBookIsFinish" />
+              <label for="inputBookIsFinished">Finished Reading</label>
+            </div>
+            <button type="submit" id="bookSubmit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!-- Form End -->
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

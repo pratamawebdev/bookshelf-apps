@@ -1,0 +1,39 @@
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .data-total-book,
+  .data-finished-reading,
+  .data-unfinished-reading {
+    width: 80%;
+  }
+
+  .data-total-book-btn,
+  .data-finished-reading-btn,
+  .data-unfinished-reading-btn {
+    width: 55px;
+    height: 55px;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .input-form {
+    width: 50vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .data-total-book,
+  .data-finished-reading,
+  .data-unfinished-reading {
+    width: 80%;
+  }
+
+  .input-form {
+    width: 300px;
+  }
+}
